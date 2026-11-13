@@ -1,1 +1,1 @@
-# quyet-AI-12/9
+# quyet-firstcourse
