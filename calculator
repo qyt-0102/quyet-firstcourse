@@ -1,1 +1,70 @@
 # quyet-firstcourse
+print('calculator')
+print("------------------------------------------------")
+print(" Добро пожаловать в кастомный калькулятор от kuiet")
+print("------------------------------------------------")
+while True:
+    print("1 - числовой калькулятор")
+    print(" ")
+    print("2 - финансовый калькулятор")
+    print(" ")
+    print("0 - выход")
+    print(" ")
+    calc = (input("выберите режим калькулятора: "))
+    if calc == "1":
+        result = 0
+        a = int(input("\nвведите первое число: "))
+        b = int(input("\nвведите второе число: "))
+        operation = input("\nоперация(+ - * / // % **): ")
+        if (operation == "/" or operation == "//" or operation == "%") and b == 0:
+            print(" ")
+            print("деление на 0 невозможно")
+            continue
+    if operation == "+":
+        result = a + b
+        print(" ")
+        print(f"Ответ: {result}")
+    elif operation == "-":
+        result = a - b
+        print(" ")
+        print(f"Ответ: {result}")
+    elif operation == "*":
+        result = a * b
+        print(" ")
+        print(f"Ответ: {result}")
+    elif operation == "/":
+        result = a / b
+        print(" ")
+        print(f"Ответ: {result}")
+    elif operation == "//":
+        result = a // b
+        print(" ")
+        print(f"Ответ: {result}")
+    elif operation == "%":
+        result = a % b
+        print(" ")
+        print(f"Ответ: {result}")
+    elif operation == "**":
+        result = a ** b
+        print(" ")
+        print(f"Ответ: {result}")
+# обычный калькулятор
+
+    elif calc == "2":
+        print("финансовые операции")
+        print(" ")
+        print("1 - покупка в магазине ")
+        print(" ")
+        operation1 = input("выберите операцию: ")
+        if operation1 == "1":
+            price = int(input("стоимость товара: "))
+            kol = int(input("количество товара: "))
+            discount = int(input("скидка в процентах: "))
+            final = price * kol * (100 - discount) / 100
+            print("к оплате: ", final)
+            if final > 100000:
+                print("ОГРОМНАЯ И ОЧЕНЬ ДОРОГАЯ ПОКУПКА")
+            elif final > 5000:
+                print("крупная покупка")
+        else:
+            print("no")
